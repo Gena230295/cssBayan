@@ -10,19 +10,15 @@
 }
 
 .main-block {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5em;
   padding-left: 1%;
 }
 
 .text-mem {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding-left: 1%;
   color: #1010c7;
-}
-
-.memBlockAll:hover .label-class .text-mem {
-  color: #000000;
 }
 
 .memBlockAll:checked .label-class .text-mem {
@@ -59,24 +55,113 @@
 
 .input-class:checked ~ .img-block {
   max-height: 50em;
-  transition: 2s;
+  transition: 1.5s;
 }
 
-.input-class:hover ~ .img-block {
-  transition: 2s;
-  max-height: 50em;
+.input-class:checked ~ .label-class > .text-mem {
+  color: #000000;
 }
 
-.img-block:hover {
-  max-height: 50em;
-  cursor: pointer;
+.input-class:checked ~ .label-class > .open-element {
+  background: url(./assets/close.svg);
+  transition: 1.5s;
 }
 
 .label-class {
   display: flex;
   border-bottom: 0.01em solid black;
   align-items: center;
-  height: 3em;
-  transition: all 1s;
+  justify-content: space-between;
+  height: 2.5em;
+  transition: 1.5s;
   cursor: pointer;
+}
+
+.open-element {
+  background: url(./assets/open.png);
+  width: 2em;
+  height: 2em;
+  transition: 1.5s;
+}
+
+.close-element {
+  background: url(./assets/close.svg);
+  width: 2em;
+  height: 2em;
+  transition: 1.5s;
+}
+
+.memBlockAll:checked .open-element {
+  background: url(./assets/close.svg);
+  transition: 1.5s;
+}
+
+@media (min-width: 640px) {
+  .main-block {
+    font-size: 2rem;
+  }
+
+  .text-mem {
+    font-size: 1.5rem;
+  }
+
+  .label-class {
+    height: 3em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .accardionBlock {
+    max-width: 51em;
+    margin: 0 auto;
+  }
+
+  .memBlockAll:hover .label-class .text-mem {
+    color: #000000;
+  }
+
+  .input-class:hover ~ .img-block {
+    transition: 2s;
+    max-height: 50em;
+  }
+
+  .img-block:hover {
+    max-height: 50em;
+    cursor: pointer;
+  }
+
+  .open-element {
+    opacity: 0;
+  }
+
+  .close-element {
+    opacity: 0;
+  }
+
+  .accardionBlock:hover .open-element {
+    opacity: 1;
+    transition: 1.5s;
+  }
+
+  .accardionBlock:hover .close-element {
+    opacity: 1;
+    transition: 1.5s;
+  }
+
+  .memBlockAll:hover .open-element {
+    background: url(./assets/close.svg);
+    transition: 1.5s;
+  }
+
+  .main-block {
+    font-size: 2.5rem;
+  }
+
+  .text-mem {
+    font-size: 2rem;
+  }
+
+  .label-class {
+    height: 3.5em;
+  }
 }
