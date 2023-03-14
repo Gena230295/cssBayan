@@ -3,3 +3,72 @@
   padding: 0;
   margin: 0;
 }
+
+.container {
+  margin: 1em auto;
+  padding: 0.6em;
+}
+
+.main-block {
+  font-size: 2rem;
+  margin-left: -50%;
+  margin-bottom: 0.5em;
+}
+
+.text-mem {
+  font-size: 1.5rem;
+  padding-left: 1%;
+  color: #1010c7;
+}
+
+.text-mem-one {
+  color: #000000;
+}
+
+.accardionBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-mem {
+  width: 70%;
+  margin-left: 15%;
+  border-radius: 1em;
+}
+
+.input-class {
+  display: none;
+}
+
+.img-block {
+  max-height: 0;
+  max-width: 50em;
+  padding-top: 0.6em;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.input-class:checked ~ .img-block {
+  max-height: 50em;
+  transition: 2s;
+}
+
+.input-class:hover ~ .img-block {
+  transition: 2s;
+  max-height: 50em;
+}
+
+.img-block:hover {
+  max-height: 50em;
+  cursor: pointer;
+}
+
+.label-class {
+  display: flex;
+  border-bottom: 0.01em solid black;
+  align-items: center;
+  height: 3em;
+  transition: all 1s;
+  cursor: pointer;
+}
