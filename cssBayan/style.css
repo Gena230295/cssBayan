@@ -11,14 +11,22 @@
 
 .main-block {
   font-size: 2rem;
-  margin-left: -50%;
   margin-bottom: 0.5em;
+  padding-left: 1%;
 }
 
 .text-mem {
   font-size: 1.5rem;
   padding-left: 1%;
   color: #1010c7;
+}
+
+.memBlockAll:hover .label-class .text-mem {
+  color: #000000;
+}
+
+.memBlockAll:checked .label-class .text-mem {
+  color: #000000;
 }
 
 .text-mem-one {
@@ -46,7 +54,7 @@
   max-width: 50em;
   padding-top: 0.6em;
   overflow: hidden;
-  transition: 1s;
+  transition: 1.5s;
 }
 
 .input-class:checked ~ .img-block {
